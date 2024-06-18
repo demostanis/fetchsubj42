@@ -21,7 +21,10 @@ for project in $projects; do
 		if [ -z "$pdf" ]; then
 			echo no pdf for $project
 		else
-			curl -s "$pdf" -o ${project##/projects/}.pdf
+			filename=${project##/projects/}.pdf
+			filename=${filename##42cursus-}
+
+			curl -s "$pdf" -o "$filename"
 		fi
 	) &
 
