@@ -29,7 +29,7 @@ for project in $projects; do
 	) &
 
 	i=$(( i + 1 ))
-	if (( i > 10 )); then
+	if (( i > 5 )); then
 		wait
 		i=0
 	fi
